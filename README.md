@@ -40,5 +40,38 @@ Padrões e Técnicas:
 - Enums: Pedido.Status, Pagamento.Metodo
 - Exceptions Personalizadas: CPFInvalidoException, EstoqueInsuficienteException
 
+## 🎯 Conceitos Implementados (MAPEAMENTO COMPLETO)
+
+### 1️⃣ Estruturas Lógicas
+- **Onde:** MenuPrincipal.java (linhas X-Y) - switch cases e loops
+- **Onde:** Validador.java (linhas X-Y) - if/else para validações
+
+### 2️⃣ Construtores
+- **Onde:** Pessoa.java - 2 construtores implementados
+- **Onde:** Cliente.java - 2 construtores implementados
+
+### 3️⃣ Encapsulamento
+- **Onde:** TODAS as classes - atributos privados + getters/setters
+- **Onde:** Cliente.setCpf() - validação no setter
+
+### 4️⃣ Herança + Abstract
+- **Onde:** Pessoa (abstract) → Cliente, Funcionario, Administrador
+- **Onde:** Método abstrato getTipo() implementado nas filhas
+
+### 5️⃣ Polimorfismo + ArrayList + Relacionamentos
+- **Onde:** ArrayList<Pessoa> para lista polimórfica
+- **Onde:** 1:N - Categoria → Produto
+- **Onde:** N:N - Pedido ↔ Produto (via ItemPedido)
+
+### 6️⃣ Serialização
+- **Onde:** ArquivoDAO.java - salvar/carregar objetos
+- **Onde:** Classes implementam Serializable
+
+### 7️⃣ Exception + Entrada/Saída
+- **Onde:** CPFInvalidoException.java - exception customizada
+- **Onde:** EstoqueInsuficienteException.java - exception customizada
+- **Onde:** MenuPrincipal - try/catch blocks
+- **Onde:** Relatórios em .txt
+
 
 
