@@ -1,18 +1,44 @@
-## Geting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# Sistema E-commerce
 
-## Folder Structure
+## Integrantes do grupo:
+### Cicero Nathan, Marcos Avelino, Anna Beatriz.
 
-The workspace contains two folders by default, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Descrição do Sistema: Sistema de e-commerce completo desenvolvido em Java que permite:
+- Cadastro e gestão de clientes, funcionários e administradores
+- Controle de produtos e estoque com categorias
+- Carrinho de compras integrado
+- Processamento de pedidos com múltiplos status
+- Sistema de pagamento (Cartão, Boleto, PIX)
+- Relatórios de vendas por período
+- Persistência de dados via serialização
+- Validações de CPF e estoque
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+# Como Executar
+- Pré requisitos: Java 17 ou superior
+- Terminal/Command Prompt
+- 1- Clone o repositório: git clone [url-do-repositorio]
+- 2- Compile todos os arquivos: javac *.java
+- 3- Execute o sistema: java MenuPrincipal
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+# Conceitos Implementados:
+Programação Orientada a Objetos:
+- Herança: Pessoa → Cliente, Funcionario, Administrador.
+- Polimorfismo: Método getTipo() nas subclasses.
+- Encapsulamento: Atributos privados com getters/setters.
+- Abstração: Classe Pessoa abstrata.
 
-## Dependency Management
+Relacionamentos entre Classes:
+- 1:N: Categoria → Produto, Cliente → Pedido.
+- N:N: Pedido ↔ Produto (via ItemPedido).
+- 1:1: Cliente ↔ Carrinho, Pedido ↔ Pagamento.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Padrões e Técnicas:
+- Serialização: ArquivoDAO para persistência
+- Generics: ArquivoDAO<T> para reutilização
+- Enums: Pedido.Status, Pagamento.Metodo
+- Exceptions Personalizadas: CPFInvalidoException, EstoqueInsuficienteException
+
+
+
